@@ -1,0 +1,1 @@
+org.springframework.context.ApplicationContextInitializer=com.hgb7725.blog.config.DotenvInitializer
