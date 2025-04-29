@@ -3,6 +3,7 @@ package com.hgb7725.blog.controller;
 import com.hgb7725.blog.payload.CommentDTO;
 import com.hgb7725.blog.service.CommentService;
 import com.hgb7725.blog.utils.BuildURIForController;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Tag(
+        name = "CRUD REST APIs for Comment Resource"
+)
 public class CommentController {
 
     private final CommentService commentService;

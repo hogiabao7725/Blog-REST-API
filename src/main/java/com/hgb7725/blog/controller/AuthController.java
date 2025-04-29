@@ -4,6 +4,7 @@ import com.hgb7725.blog.payload.JWTAuthResponse;
 import com.hgb7725.blog.payload.LoginDTO;
 import com.hgb7725.blog.payload.RegisterDTO;
 import com.hgb7725.blog.service.AuthService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/auth")
+@Tag(
+        name = "CRUD REST APIs for Auth Resource"
+)
 public class AuthController {
 
     private final AuthService authService;
